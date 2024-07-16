@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details and Charts</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body class="bg-[#F5F6FA] dark:bg-[#212529]">
+    <nav class="p-4 px-10 bg-[#4880FF] dark:bg-sky-800 flex justify-between items-center rounded-b-md">
+        <label class="relative inline-flex items-center cursor-pointer">
+  <input class="sr-only peer" value="" type="checkbox" id="Togg" />
+  <div
+    class="w-16 h-7 rounded-full ring-0 peer duration-500 outline-none bg-gray-200 overflow-hidden before:flex before:items-center before:justify-center after:flex after:items-center after:justify-center before:content-['☀️'] before:absolute before:h-5 before:w-5 before:top-1/2 before:bg-white before:rounded-full before:left-1 before:-translate-y-1/2 before:transition-all before:duration-700 peer-checked:before:opacity-0 peer-checked:before:rotate-90 peer-checked:before:-translate-y-full shadow-lg shadow-gray-400 peer-checked:shadow-lg peer-checked:shadow-gray-700 peer-checked:bg-[#383838] after:content-['🌑'] after:absolute after:bg-[#1d1d1d] after:rounded-full after:top-[2.9px] after:right-1 after:translate-y-full after:w-5 after:h-5 after:opacity-0 after:transition-all after:duration-700 peer-checked:after:opacity-100 peer-checked:after:rotate-180 peer-checked:after:translate-y-0"
+  ></div>
+</label>
+        <a href="index.html"
+  
+  class="bg-white  text-center w-48 rounded-2xl h-14 relative font-sans text-black text-xl font-semibold group"
+>
+  <div
+    class="bg-blue-400 backBtn rounded-xl h-12 w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[184px] z-10 duration-500"
+  >
+    <svg
+      width="25px"
+      height="25px"
+      viewBox="0 0 1024 1024"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        fill="#000000"
+        d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+      ></path>
+      <path
+        fill="#000000"
+        d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+      ></path>
+    </svg>
+  </div>
+  <p class="translate-x-2 pt-3">Go Back</p>
+</a>
+    </nav>
+    
+    <div class="w-[85%] mx-auto">
+        <h1 class="text-center font-[600] text-[30px] dark:text-white my-10 "> Customer Details</h1>
+        <div class=" flex flex-wrap justify-between gap-y-10">
+            <div id="customer-details" class="text-center relative xl:w-4/12 zero:w-full zero:mx-auto pt-3">
+                
+            </div>
+
+            <div class="shadow-2xl  my-4 xl:w-8/12 zero:w-full mx-auto ">
+            <div class=" text-[20px] font-[500] bg-[#4880FF] dark:bg-sky-800 text-white  p-3 rounded-t-lg text-center">
+                Transaction Chart
+            </div>
+            <div class="p-3 bg-white rounded-b-lg">
+                <canvas class=""  id="transactionChart"></canvas>
+                <div class="text-center my-3">
+                    <button id="toggleChart" class="border font-[500] text-[18px] text-white bg-[#4880FF]  border-white  hover:bg-transparent hover:border-[#3974ff] hover:text-[#3974ff] transition-all duration-[0.5] rounded-md py-2 px-3 mt-3 mb-1">change Chart </button>
+                </div>
+            </div>
+            <div class="p-3 mt-7 bg-white rounded-lg">
+                  <canvas id="myChart"></canvas>
+
+            </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
